@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/10/30/how-hexo/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="使用hexo搭建github博客搭建环境:Mac 使用hexo的优点：可以使用Markdown编辑页面，各种各样的Markdown编辑器使用起来非常方便 步骤一、创建github仓库在github创建与用户名对应的仓库，如用户名为Lie8466，则需要创建的仓库为 Lie8466.github.io。 参考文档：https://pages.github.com/ 中的步骤1 注：如果已经创建过，请">
-<meta property="og:updated_time" content="2017-10-30T06:11:14.000Z">
+<meta property="og:updated_time" content="2017-10-30T06:50:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo搭建github博客">
 <meta name="twitter:description" content="使用hexo搭建github博客搭建环境:Mac 使用hexo的优点：可以使用Markdown编辑页面，各种各样的Markdown编辑器使用起来非常方便 步骤一、创建github仓库在github创建与用户名对应的仓库，如用户名为Lie8466，则需要创建的仓库为 Lie8466.github.io。 参考文档：https://pages.github.com/ 中的步骤1 注：如果已经创建过，请">
@@ -52,9 +52,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -105,11 +105,16 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p><em>参考文档 <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/index.html</a><br>部署参考 <a href="https://hexo.io/zh-cn/docs/deployment.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/deployment.html</a> </em></p>
 <h5 id="部署成功"><a href="#部署成功" class="headerlink" title="部署成功"></a>部署成功</h5><p>在浏览器中打开 Lie8466.github.io ，正常显示网页，表明部署成功。</p>
+<h4 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h4><p>修改/Users/yaweili/Documents/hexo/source/_posts下的.md文件，可以通过localhost:4000看到实时的更新</p>
+<p>部署：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">$ hexo generation // 或者hexo g</div><div class="line">$ hexo deploy // 或者hexo d</div></pre></td></tr></table></figure>
+<p><em><br>参考文档：<a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">http://www.cnblogs.com/zhcncn/p/4097881.html</a>
+</em></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/30/how-hexo/" data-id="cj9dshnk80000wkseeyrm0z1h" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/30/how-hexo/" data-id="cj9dts6tz0000ycse3m248c7j" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -143,7 +148,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -164,7 +169,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
