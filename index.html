@@ -66,12 +66,16 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-how-hexo" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-JS-prototype" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/how-hexo/" class="article-date">
-  <time datetime="2017-10-30T03:06:24.000Z" itemprop="datePublished">2017-10-30</time>
+    <a href="/2017/JS-prototype/" class="article-date">
+  <time datetime="2017-10-30T08:56:56.000Z" itemprop="datePublished">2017-10-30</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/总结/">总结</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -80,7 +84,53 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/how-hexo/">hexo搭建github博客</a>
+      <a class="article-title" href="/2017/JS-prototype/">JS原型与原型链</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="问题的引入"><a href="#问题的引入" class="headerlink" title="问题的引入"></a>问题的引入</h4><p>用控制台输入如下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ var arr = [];</div><div class="line">$ arr.length // 0</div></pre></td></tr></table></figure>
+<p>问题：为什么arr会有length属性？</p>
+<h4 id="显示原型prototype"><a href="#显示原型prototype" class="headerlink" title="显示原型prototype"></a>显示原型prototype</h4><p>JavaScript中每一个函数，都有一个prototype属性， 这个属性指向函数的原型对象</p>
+<h5 id="自定义函数的prototype"><a href="#自定义函数的prototype" class="headerlink" title="自定义函数的prototype"></a>自定义函数的prototype</h5>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/JS-prototype/" data-id="cj9e336mz0002s3semnwvvd0l" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-how-hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/how-hexo/" class="article-date">
+  <time datetime="2017-10-30T03:06:24.000Z" itemprop="datePublished">2017-10-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/总结/">总结</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/how-hexo/">hexo搭建github博客</a>
     </h1>
   
 
@@ -108,18 +158,28 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p><em>参考文档 <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/index.html</a><br>部署参考 <a href="https://hexo.io/zh-cn/docs/deployment.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/deployment.html</a> </em></p>
 <h5 id="部署成功"><a href="#部署成功" class="headerlink" title="部署成功"></a>部署成功</h5><p>在浏览器中打开 Lie8466.github.io ，正常显示网页，表明部署成功。</p>
-<h4 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h4><p>修改/Users/yaweili/Documents/hexo/source/_posts下的.md文件，可以通过localhost:4000看到实时的更新</p>
+<h4 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h4><p>修改/Users/yaweili/Documents/hexo/source/_posts下的.md文件，刷新localhost:4000可以看到实时的更新</p>
 <p>部署：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">$ hexo generation // 或者hexo g</div><div class="line">$ hexo deploy // 或者hexo d</div></pre></td></tr></table></figure>
+<h4 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h4><p>/Users/yaweili/Documents/hexo/_config.yml有很多可以自己配置的小功能点，理解每一个配置项的含义可以个性化定制自己的页面</p>
+<h5 id="配置标题"><a href="#配置标题" class="headerlink" title="配置标题"></a>配置标题</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># Site</div><div class="line">title: Yawei Li // 配置网站首页的大标题，默认为hexo</div><div class="line">subtitle: knowing something of everything and everything of something // 配置网站首页的副标题，默认无</div><div class="line">description:</div><div class="line">author: Yawei Li</div><div class="line">language: zh</div><div class="line">timezone:</div></pre></td></tr></table></figure>
+<h5 id="配置页面路径"><a href="#配置页面路径" class="headerlink" title="配置页面路径"></a>配置页面路径</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># URL</div><div class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</div><div class="line">url: http://yoursite.com</div><div class="line">root: /</div><div class="line">permalink: :year/:title/  // 配置页面的路径，默认为年/月/日/标题，会显示太长，可以自行删掉一些信息</div><div class="line">permalink_defaults:</div></pre></td></tr></table></figure>
+<h5 id="配置分类及标签"><a href="#配置分类及标签" class="headerlink" title="配置分类及标签"></a>配置分类及标签</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Category &amp; Tag</div><div class="line">default_category: conclusion</div><div class="line">category_map: [&apos;学习笔记&apos;, &apos;总结&apos;, &apos;分享&apos;, &apos;其它&apos;]</div><div class="line">tag_map: [&apos;JS&apos;, &apos;Vue&apos;, &apos;前端性能&apos;, &apos;其它&apos;]</div></pre></td></tr></table></figure>
+<p>上述配置的分类和标签可以在新建的.md文件中使用，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: hexo搭建github博客</div><div class="line"></div><div class="line">date: 2017-10-30 11:06:24</div><div class="line"></div><div class="line">category: 总结</div><div class="line"></div><div class="line">tags: 其它</div><div class="line"></div><div class="line">---</div></pre></td></tr></table></figure>
+<p>配置完成的分类和标签会在博客首页有相应的筛选项，可以快速查找某一个类型或者某个标签下的文章。</p>
+<p>更多功能等待发现。。。</p>
 <p><em><br>参考文档：<a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">http://www.cnblogs.com/zhcncn/p/4097881.html</a>
 </em></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/how-hexo/" data-id="cj9dxzknd0001epsenlpogog8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/how-hexo/" data-id="cj9e336mt0001s3seafmn8n6p" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/其它/">其它</a></li></ul>
+
     </footer>
   </div>
   
@@ -133,12 +193,33 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/总结/">总结</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/">JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/其它/">其它</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/其它/" style="font-size: 10px;">其它</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -157,7 +238,11 @@
       <ul>
         
           <li>
-            <a href="/how-hexo/">hexo搭建github博客</a>
+            <a href="/2017/JS-prototype/">JS原型与原型链</a>
+          </li>
+        
+          <li>
+            <a href="/2017/how-hexo/">hexo搭建github博客</a>
           </li>
         
       </ul>

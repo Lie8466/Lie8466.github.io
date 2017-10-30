@@ -3,15 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2017/10 | Yawei Li</title>
+  <title>JS原型与原型链 | Yawei Li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Yawei Li">
-<meta property="og:url" content="http://yoursite.com/archives/2017/10/index.html">
+  <meta name="description" content="问题的引入用控制台输入如下命令 12$ var arr = [];$ arr.length // 0 问题：为什么arr会有length属性？ 显示原型prototypeJavaScript中每一个函数，都有一个prototype属性， 这个属性指向函数的原型对象 自定义函数的prototype">
+<meta name="keywords" content="JS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS原型与原型链">
+<meta property="og:url" content="http://yoursite.com/2017/JS-prototype/index.html">
 <meta property="og:site_name" content="Yawei Li">
+<meta property="og:description" content="问题的引入用控制台输入如下命令 12$ var arr = [];$ arr.length // 0 问题：为什么arr会有length属性？ 显示原型prototypeJavaScript中每一个函数，都有一个prototype属性， 这个属性指向函数的原型对象 自定义函数的prototype">
 <meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2017-10-30T10:06:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yawei Li">
+<meta name="twitter:title" content="JS原型与原型链">
+<meta name="twitter:description" content="问题的引入用控制台输入如下命令 12$ var arr = [];$ arr.length // 0 问题：为什么arr会有length属性？ 显示原型prototypeJavaScript中每一个函数，都有一个prototype属性， 这个属性指向函数的原型对象 自定义函数的prototype">
   
     <link rel="alternate" href="/atom.xml" title="Yawei Li" type="application/atom+xml">
   
@@ -64,58 +69,61 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/JS-prototype/" class="archive-article-date">
-  <time datetime="2017-10-30T08:56:56.000Z" itemprop="datePublished">Oct 30</time>
+        <section id="main"><article id="post-JS-prototype" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/JS-prototype/" class="article-date">
+  <time datetime="2017-10-30T08:56:56.000Z" itemprop="datePublished">2017-10-30</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/总结/">总结</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/JS-prototype/">JS原型与原型链</a>
+    <h1 class="article-title" itemprop="name">
+      JS原型与原型链
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/how-hexo/" class="archive-article-date">
-  <time datetime="2017-10-30T03:06:24.000Z" itemprop="datePublished">Oct 30</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/how-hexo/">hexo搭建github博客</a>
-    </h1>
-  
+        <h4 id="问题的引入"><a href="#问题的引入" class="headerlink" title="问题的引入"></a>问题的引入</h4><p>用控制台输入如下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ var arr = [];</div><div class="line">$ arr.length // 0</div></pre></td></tr></table></figure>
+<p>问题：为什么arr会有length属性？</p>
+<h4 id="显示原型prototype"><a href="#显示原型prototype" class="headerlink" title="显示原型prototype"></a>显示原型prototype</h4><p>JavaScript中每一个函数，都有一个prototype属性， 这个属性指向函数的原型对象</p>
+<h5 id="自定义函数的prototype"><a href="#自定义函数的prototype" class="headerlink" title="自定义函数的prototype"></a>自定义函数的prototype</h5>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/JS-prototype/" data-id="cj9e336mz0002s3semnwvvd0l" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/how-hexo/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo搭建github博客</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
