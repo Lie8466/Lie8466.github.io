@@ -53,9 +53,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -65,6 +65,98 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-how-charles" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/how-charles/" class="article-date">
+  <time datetime="2017-11-10T11:42:37.000Z" itemprop="datePublished">2017-11-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/how-charles/">Charles使用指南</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Charles使用指南"><a href="#Charles使用指南" class="headerlink" title="Charles使用指南"></a>Charles使用指南</h3><p>环境： Mac<br>Charles版本：v4.1.3</p>
+<p>charles是Mac上很好用的抓包工具。在需要跨页面的查看所有请求时，Chrome的network已经不能满足这个要求，此时使用charles再好不过了。另外还可以使用charles更改请求和返回数据、使请求打到不同的环境等。下面介绍几个常用的技巧。</p>
+<h4 id="Recording-settings"><a href="#Recording-settings" class="headerlink" title="Recording settings"></a>Recording settings</h4><p>打开Proxy-&gt;Recording Settings，有以下三个选项</p>
+<p>1.options</p>
+<p><img src="http://note.youdao.com/yws/public/resource/a9acf0b7cd75f096932b413d3307b10f/xmlnote/WEBRESOURCE91a698175012928073c4f5ae3685fc67/973" alt=""></p>
+<p>Max Requests: 限制当前存储的最多请求数，超过这个数字的日期较早的请求将会被自动清除掉。再也不用手动点清除按钮了</p>
+<p>2.Include</p>
+<p><img src="http://note.youdao.com/yws/public/resource/a9acf0b7cd75f096932b413d3307b10f/xmlnote/WEBRESOURCE0af1bfea9e344a793c93034eaa99d859/977" alt=""></p>
+<p>太多的请求眼花缭乱，看不到自己想看到的请求？那么使用Include吧。只要你在这里配置了请求，那么charles将只拦截匹配的请求，还可以使用正则匹配，例如图片中，只拦截域名以”baidu.com”结束的域名，www.baidu.com、news.baidu.com以及zhidao.baidu.com都可以拦截到，但是不想看到的例如www.taobao.com就看不到了</p>
+<p>3.Exclude</p>
+<p><img src="http://note.youdao.com/yws/public/resource/a9acf0b7cd75f096932b413d3307b10f/xmlnote/WEBRESOURCEaf03c2b6daaacb1bf0c63901ee4cd20e/981" alt=""></p>
+<p>也许你只想拦截www.baidu.com、news.baidu.com以及别的<em>.baicu.com而不想看到zhidao.baidu.com呢？那就include \</em>.baidu.com，配置exclude zhidao.baidu.com吧</p>
+<h4 id="Map-Remote"><a href="#Map-Remote" class="headerlink" title="Map Remote"></a>Map Remote</h4><p>开发过程中经常遇到需要把远端请求打到本地的情况。尤其是有了node之后，这种需求愈发明显</p>
+<p>例如有以下情况</p>
+<p>原始请求:<a href="http://news.baidu.com/tech/category1/widget?ajax=json&amp;id=ad" target="_blank" rel="external">http://news.baidu.com/tech/category1/widget?ajax=json&amp;id=ad</a><br>本地请求:localhost:8080/pages/widget?ajax=json&amp;id=ad</p>
+<p>通用的匹配路径为<a href="http://news.baidu.com/tech/category1/(abc)匹配为localhost:8080/pages/abc" target="_blank" rel="external">http://news.baidu.com/tech/category1/(abc)匹配为localhost:8080/pages/abc</a></p>
+<p>那么可以如下配置：</p>
+<p><img src="http://note.youdao.com/yws/public/resource/a9acf0b7cd75f096932b413d3307b10f/xmlnote/WEBRESOURCE72abf6622522bd0d92d141d1d97a0bc9/983" alt=""></p>
+<h4 id="BreakPoint"><a href="#BreakPoint" class="headerlink" title="BreakPoint"></a>BreakPoint</h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/how-charles/" data-id="cj9tv6jc70001tuseejdwl4ep" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/其它/">其它</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-My-New-Post" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/My-New-Post/" class="article-date">
+  <time datetime="2017-11-10T11:42:00.000Z" itemprop="datePublished">2017-11-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/My-New-Post/">My New Post</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/My-New-Post/" data-id="cj9tv6jd50009tusefuq67aju" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-JS-prototype" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -100,7 +192,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/JS-prototype/" data-id="cj9eyw7y40001diseku8stqwp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/JS-prototype/" data-id="cj9tv6jd7000atuse9d1t5g13" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
@@ -175,7 +267,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/how-hexo/" data-id="cj9eyw7y90002disefdxufb52" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/how-hexo/" data-id="cj9tv6jcd0002tuseb2h96p0y" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/其它/">其它</a></li></ul>
@@ -194,7 +286,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Catégories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/总结/">总结</a></li></ul>
     </div>
@@ -204,7 +296,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/">JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/其它/">其它</a></li></ul>
     </div>
@@ -216,7 +308,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
-      <a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/其它/" style="font-size: 10px;">其它</a>
+      <a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/其它/" style="font-size: 20px;">其它</a>
     </div>
   </div>
 
@@ -225,7 +317,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
     </div>
   </div>
 
@@ -233,9 +325,17 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/how-charles/">Charles使用指南</a>
+          </li>
+        
+          <li>
+            <a href="/2017/My-New-Post/">My New Post</a>
+          </li>
         
           <li>
             <a href="/2017/JS-prototype/">JS原型与原型链</a>
@@ -258,7 +358,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 Yawei Li<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

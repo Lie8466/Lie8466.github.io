@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Charles使用指南 | Yawei Li</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Charles使用指南环境： MacCharles版本：v4.1.3 charles是Mac上很好用的抓包工具。在需要跨页面的查看所有请求时，Chrome的network已经不能满足这个要求，此时使用charles再好不过了。另外还可以使用charles更改请求和返回数据、使请求打到不同的环境等。下面介绍几个常用的技巧。 Recording settings打开Proxy-&amp;gt;Recordin">
+<meta name="keywords" content="其它">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Charles使用指南">
+<meta property="og:url" content="http://yoursite.com/2017/how-charles/index.html">
+<meta property="og:site_name" content="Yawei Li">
+<meta property="og:description" content="Charles使用指南环境： MacCharles版本：v4.1.3 charles是Mac上很好用的抓包工具。在需要跨页面的查看所有请求时，Chrome的network已经不能满足这个要求，此时使用charles再好不过了。另外还可以使用charles更改请求和返回数据、使请求打到不同的环境等。下面介绍几个常用的技巧。 Recording settings打开Proxy-&amp;gt;Recordin">
+<meta property="og:locale" content="zh">
+<meta property="og:image" content="http://note.youdao.com/yws/public/resource/a9acf0b7cd75f096932b413d3307b10f/xmlnote/WEBRESOURCE91a698175012928073c4f5ae3685fc67/973">
+<meta property="og:image" content="http://note.youdao.com/yws/public/resource/a9acf0b7cd75f096932b413d3307b10f/xmlnote/WEBRESOURCE0af1bfea9e344a793c93034eaa99d859/977">
+<meta property="og:image" content="http://note.youdao.com/yws/public/resource/a9acf0b7cd75f096932b413d3307b10f/xmlnote/WEBRESOURCEaf03c2b6daaacb1bf0c63901ee4cd20e/981">
+<meta property="og:image" content="http://note.youdao.com/yws/public/resource/a9acf0b7cd75f096932b413d3307b10f/xmlnote/WEBRESOURCE72abf6622522bd0d92d141d1d97a0bc9/983">
+<meta property="og:updated_time" content="2017-11-10T12:13:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Charles使用指南">
+<meta name="twitter:description" content="Charles使用指南环境： MacCharles版本：v4.1.3 charles是Mac上很好用的抓包工具。在需要跨页面的查看所有请求时，Chrome的network已经不能满足这个要求，此时使用charles再好不过了。另外还可以使用charles更改请求和返回数据、使请求打到不同的环境等。下面介绍几个常用的技巧。 Recording settings打开Proxy-&amp;gt;Recordin">
+<meta name="twitter:image" content="http://note.youdao.com/yws/public/resource/a9acf0b7cd75f096932b413d3307b10f/xmlnote/WEBRESOURCE91a698175012928073c4f5ae3685fc67/973">
+  
+    <link rel="alternate" href="/atom.xml" title="Yawei Li" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Yawei Li</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">knowing something of everything and everything of something</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-how-charles" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/how-charles/" class="article-date">
+  <time datetime="2017-11-10T11:42:37.000Z" itemprop="datePublished">2017-11-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Charles使用指南
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Charles使用指南"><a href="#Charles使用指南" class="headerlink" title="Charles使用指南"></a>Charles使用指南</h3><p>环境： Mac<br>Charles版本：v4.1.3</p>
+<p>charles是Mac上很好用的抓包工具。在需要跨页面的查看所有请求时，Chrome的network已经不能满足这个要求，此时使用charles再好不过了。另外还可以使用charles更改请求和返回数据、使请求打到不同的环境等。下面介绍几个常用的技巧。</p>
+<h4 id="Recording-settings"><a href="#Recording-settings" class="headerlink" title="Recording settings"></a>Recording settings</h4><p>打开Proxy-&gt;Recording Settings，有以下三个选项</p>
+<p>1.options</p>
+<p><img src="http://note.youdao.com/yws/public/resource/a9acf0b7cd75f096932b413d3307b10f/xmlnote/WEBRESOURCE91a698175012928073c4f5ae3685fc67/973" alt=""></p>
+<p>Max Requests: 限制当前存储的最多请求数，超过这个数字的日期较早的请求将会被自动清除掉。再也不用手动点清除按钮了</p>
+<p>2.Include</p>
+<p><img src="http://note.youdao.com/yws/public/resource/a9acf0b7cd75f096932b413d3307b10f/xmlnote/WEBRESOURCE0af1bfea9e344a793c93034eaa99d859/977" alt=""></p>
+<p>太多的请求眼花缭乱，看不到自己想看到的请求？那么使用Include吧。只要你在这里配置了请求，那么charles将只拦截匹配的请求，还可以使用正则匹配，例如图片中，只拦截域名以”baidu.com”结束的域名，www.baidu.com、news.baidu.com以及zhidao.baidu.com都可以拦截到，但是不想看到的例如www.taobao.com就看不到了</p>
+<p>3.Exclude</p>
+<p><img src="http://note.youdao.com/yws/public/resource/a9acf0b7cd75f096932b413d3307b10f/xmlnote/WEBRESOURCEaf03c2b6daaacb1bf0c63901ee4cd20e/981" alt=""></p>
+<p>也许你只想拦截www.baidu.com、news.baidu.com以及别的<em>.baicu.com而不想看到zhidao.baidu.com呢？那就include \</em>.baidu.com，配置exclude zhidao.baidu.com吧</p>
+<h4 id="Map-Remote"><a href="#Map-Remote" class="headerlink" title="Map Remote"></a>Map Remote</h4><p>开发过程中经常遇到需要把远端请求打到本地的情况。尤其是有了node之后，这种需求愈发明显</p>
+<p>例如有以下情况</p>
+<p>原始请求:<a href="http://news.baidu.com/tech/category1/widget?ajax=json&amp;id=ad" target="_blank" rel="external">http://news.baidu.com/tech/category1/widget?ajax=json&amp;id=ad</a><br>本地请求:localhost:8080/pages/widget?ajax=json&amp;id=ad</p>
+<p>通用的匹配路径为<a href="http://news.baidu.com/tech/category1/(abc)匹配为localhost:8080/pages/abc" target="_blank" rel="external">http://news.baidu.com/tech/category1/(abc)匹配为localhost:8080/pages/abc</a></p>
+<p>那么可以如下配置：</p>
+<p><img src="http://note.youdao.com/yws/public/resource/a9acf0b7cd75f096932b413d3307b10f/xmlnote/WEBRESOURCE72abf6622522bd0d92d141d1d97a0bc9/983" alt=""></p>
+<h4 id="BreakPoint"><a href="#BreakPoint" class="headerlink" title="BreakPoint"></a>BreakPoint</h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/how-charles/" data-id="cj9tv6jc70001tuseejdwl4ep" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/其它/">其它</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/My-New-Post/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">My New Post</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Catégories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/总结/">总结</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/">JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/其它/">其它</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/其它/" style="font-size: 20px;">其它</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/how-charles/">Charles使用指南</a>
+          </li>
+        
+          <li>
+            <a href="/2017/My-New-Post/">My New Post</a>
+          </li>
+        
+          <li>
+            <a href="/2017/JS-prototype/">JS原型与原型链</a>
+          </li>
+        
+          <li>
+            <a href="/2017/how-hexo/">hexo搭建github博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Yawei Li<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
