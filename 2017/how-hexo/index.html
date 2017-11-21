@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>hexo搭建github博客 | Yawei Li</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="使用hexo搭建github博客搭建环境:Mac 使用hexo的优点：可以使用Markdown编辑页面，各种各样的Markdown编辑器使用起来非常方便 步骤一、创建github仓库在github创建与用户名对应的仓库，如用户名为Lie8466，则需要创建的仓库为 Lie8466.github.io。 参考文档：htt">
+<meta name="keywords" content="其它">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo搭建github博客">
+<meta property="og:url" content="http://yoursite.com/2017/how-hexo/index.html">
+<meta property="og:site_name" content="Yawei Li">
+<meta property="og:description" content="使用hexo搭建github博客搭建环境:Mac 使用hexo的优点：可以使用Markdown编辑页面，各种各样的Markdown编辑器使用起来非常方便 步骤一、创建github仓库在github创建与用户名对应的仓库，如用户名为Lie8466，则需要创建的仓库为 Lie8466.github.io。 参考文档：https://pages.github.com/ 中的步骤1 注：如果已经创建过，请">
+<meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2017-11-12T02:04:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo搭建github博客">
+<meta name="twitter:description" content="使用hexo搭建github博客搭建环境:Mac 使用hexo的优点：可以使用Markdown编辑页面，各种各样的Markdown编辑器使用起来非常方便 步骤一、创建github仓库在github创建与用户名对应的仓库，如用户名为Lie8466，则需要创建的仓库为 Lie8466.github.io。 参考文档：https://pages.github.com/ 中的步骤1 注：如果已经创建过，请">
+  
+    <link rel="alternate" href="/atom.xml" title="Yawei Li" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Yawei Li</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">knowing something of everything and everything of something</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-how-hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/how-hexo/" class="article-date">
+  <time datetime="2017-10-30T03:06:24.000Z" itemprop="datePublished">2017-10-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/总结/">总结</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      hexo搭建github博客
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="使用hexo搭建github博客"><a href="#使用hexo搭建github博客" class="headerlink" title="使用hexo搭建github博客"></a>使用hexo搭建github博客</h3><p>搭建环境:Mac</p>
+<p>使用hexo的优点：可以使用Markdown编辑页面，各种各样的Markdown编辑器使用起来非常方便</p>
+<h4 id="步骤一、创建github仓库"><a href="#步骤一、创建github仓库" class="headerlink" title="步骤一、创建github仓库"></a>步骤一、创建github仓库</h4><p>在github创建与用户名对应的仓库，如用户名为Lie8466，则需要创建的仓库为 Lie8466.github.io。</p>
+<p><em>参考文档：<a href="https://pages.github.com/" target="_blank" rel="noopener">https://pages.github.com/</a> 中的步骤1<br> 注：如果已经创建过，请忽略此步。hexo部署完毕后会更改默认的index页面</em></p>
+<h4 id="步骤二、安装hexo"><a href="#步骤二、安装hexo" class="headerlink" title="步骤二、安装hexo"></a>步骤二、安装hexo</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
+<p>手动创建hexo文件夹,假如创建的目录为/Users/yaweili/Documents/hexo</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ cd /Users/yaweili/Documents/hexo</span><br><span class="line">$ hexo init</span><br><span class="line">$ npm install</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>Hexo Server已经启动了，在浏览器中打开 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> ，<br>你可以按Ctrl+C 停止Server。</p>
+<p>打开新的命令行窗口(command+T)，创建新文章，”My New Post”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;My New Post&quot;</span><br></pre></td></tr></table></figure>
+<p>执行下面的命令，将markdown文件生成静态网页。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h5 id="编辑文章"><a href="#编辑文章" class="headerlink" title="编辑文章"></a>编辑文章</h5><p>在/Users/yaweili/Documents/hexo/source/_posts下可以看到My-New-Post.md文件，利用markdown编辑器编辑该文件</p>
+<h5 id="部署github"><a href="#部署github" class="headerlink" title="部署github"></a>部署github</h5><p>在/Users/yaweili/Documents/hexo下找到文件_config.yml，用编辑器打开，找到</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type:</span><br></pre></td></tr></table></figure>
+<p>修改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/Lie8466/Lie8466.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
+<p>安装hexo-deployer-git， 以及部署</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p><em>参考文档 <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/index.html</a><br>部署参考 <a href="https://hexo.io/zh-cn/docs/deployment.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/deployment.html</a> </em></p>
+<h5 id="部署成功"><a href="#部署成功" class="headerlink" title="部署成功"></a>部署成功</h5><p>在浏览器中打开 Lie8466.github.io ，正常显示网页，表明部署成功。</p>
+<h4 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h4><p>修改/Users/yaweili/Documents/hexo/source/_posts下的.md文件，刷新localhost:4000可以看到实时的更新</p>
+<p>部署：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generation // 或者hexo g</span><br><span class="line">$ hexo deploy // 或者hexo d</span><br></pre></td></tr></table></figure>
+<h4 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h4><p>/Users/yaweili/Documents/hexo/_config.yml有很多可以自己配置的小功能点，理解每一个配置项的含义可以个性化定制自己的页面</p>
+<h5 id="配置标题"><a href="#配置标题" class="headerlink" title="配置标题"></a>配置标题</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: Yawei Li // 配置网站首页的大标题，默认为hexo</span><br><span class="line">subtitle: knowing something of everything and everything of something // 配置网站首页的副标题，默认无</span><br><span class="line">description:</span><br><span class="line">author: Yawei Li</span><br><span class="line">language: zh</span><br><span class="line">timezone:</span><br></pre></td></tr></table></figure>
+<h5 id="配置页面路径"><a href="#配置页面路径" class="headerlink" title="配置页面路径"></a>配置页面路径</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</span><br><span class="line">url: http://yoursite.com</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:title/  // 配置页面的路径，默认为年/月/日/标题，会显示太长，可以自行删掉一些信息</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
+<h5 id="配置分类及标签"><a href="#配置分类及标签" class="headerlink" title="配置分类及标签"></a>配置分类及标签</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Category &amp; Tag</span><br><span class="line">default_category: conclusion</span><br><span class="line">category_map: [&apos;学习笔记&apos;, &apos;总结&apos;, &apos;分享&apos;, &apos;其它&apos;]</span><br><span class="line">tag_map: [&apos;JS&apos;, &apos;Vue&apos;, &apos;前端性能&apos;, &apos;其它&apos;]</span><br></pre></td></tr></table></figure>
+<p>上述配置的分类和标签可以在新建的.md文件中使用，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: hexo搭建github博客</span><br><span class="line"></span><br><span class="line">date: 2017-10-30 11:06:24</span><br><span class="line"></span><br><span class="line">category: 总结</span><br><span class="line"></span><br><span class="line">tags: 其它</span><br><span class="line"></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>配置完成的分类和标签会在博客首页有相应的筛选项，可以快速查找某一个类型或者某个标签下的文章。</p>
+<p>更多功能等待发现。。。</p>
+<p><em><br>参考文档：<a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="noopener">http://www.cnblogs.com/zhcncn/p/4097881.html</a>
+</em></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/how-hexo/" data-id="cja9e3k150002azseh3sph96c" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/其它/">其它</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/JS-prototype/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          JS原型与原型链
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/总结/">总结</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/">JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/其它/">其它</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/其它/" style="font-size: 10px;">其它</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/arguments-slice/">浅析&#34;对arguments对象使用Array.prototype.slice()可以将其转化为数组&#34;</a>
+          </li>
+        
+          <li>
+            <a href="/2017/how-charles/">Charles使用指南</a>
+          </li>
+        
+          <li>
+            <a href="/2017/JS-prototype/">JS原型与原型链</a>
+          </li>
+        
+          <li>
+            <a href="/2017/how-hexo/">hexo搭建github博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Yawei Li<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

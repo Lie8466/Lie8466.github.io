@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JS原型与原型链 | Yawei Li</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="问题的引入用控制台输入如下命令 12$ var arr = [];$ arr.length // 0 问题：为什么arr会有length属性？ 1. 显示原型prototype JavaScript中每一个函数，都有一个prototype属性， 这个属性指向函数的原型对象  1.1 自定义函数的prototype123">
+<meta name="keywords" content="JS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS原型与原型链">
+<meta property="og:url" content="http://yoursite.com/2017/JS-prototype/index.html">
+<meta property="og:site_name" content="Yawei Li">
+<meta property="og:description" content="问题的引入用控制台输入如下命令 12$ var arr = [];$ arr.length // 0 问题：为什么arr会有length属性？ 1. 显示原型prototype JavaScript中每一个函数，都有一个prototype属性， 这个属性指向函数的原型对象  1.1 自定义函数的prototype123var fn = function() &amp;#123;&amp;#125;console.">
+<meta property="og:locale" content="zh">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/11/12/4af86fc38f20ab3e1096f05f7e0e0db9">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/11/12/603bed777f274b1b84c6f4c8926b4339">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/11/13/15fb4ff1bef7bc3e">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/11/13/15fb5618a38b850a">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/11/13/15fb4feb2eb4e810">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/11/13/15fb5628e12d0785">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/11/13/15fb5576c544462e">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/11/13/15fb55bf5ff07694">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/11/13/15fb55df5e74932a">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/11/13/15fb55f9e4dab238">
+<meta property="og:updated_time" content="2017-11-13T12:52:20.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS原型与原型链">
+<meta name="twitter:description" content="问题的引入用控制台输入如下命令 12$ var arr = [];$ arr.length // 0 问题：为什么arr会有length属性？ 1. 显示原型prototype JavaScript中每一个函数，都有一个prototype属性， 这个属性指向函数的原型对象  1.1 自定义函数的prototype123var fn = function() &amp;#123;&amp;#125;console.">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2017/11/12/4af86fc38f20ab3e1096f05f7e0e0db9">
+  
+    <link rel="alternate" href="/atom.xml" title="Yawei Li" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Yawei Li</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">knowing something of everything and everything of something</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-JS-prototype" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/JS-prototype/" class="article-date">
+  <time datetime="2017-10-30T08:56:56.000Z" itemprop="datePublished">2017-10-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/总结/">总结</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JS原型与原型链
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="问题的引入"><a href="#问题的引入" class="headerlink" title="问题的引入"></a>问题的引入</h4><p>用控制台输入如下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ var arr = [];</span><br><span class="line">$ arr.length // 0</span><br></pre></td></tr></table></figure>
+<p>问题：为什么arr会有length属性？</p>
+<h4 id="1-显示原型prototype"><a href="#1-显示原型prototype" class="headerlink" title="1. 显示原型prototype"></a>1. 显示原型prototype</h4><ul>
+<li>JavaScript中每一个函数，都有一个prototype属性， 这个属性指向函数的原型对象</li>
+</ul>
+<h5 id="1-1-自定义函数的prototype"><a href="#1-1-自定义函数的prototype" class="headerlink" title="1.1 自定义函数的prototype"></a>1.1 自定义函数的prototype</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var fn = function() &#123;&#125;</span><br><span class="line">console.log( fn.prototype );</span><br><span class="line">fn.prototype.constructor === fn;   // true</span><br></pre></td></tr></table></figure>
+<p><img src="https://user-gold-cdn.xitu.io/2017/11/12/4af86fc38f20ab3e1096f05f7e0e0db9" alt=""></p>
+<h5 id="1-2-内置构造器的prototype"><a href="#1-2-内置构造器的prototype" class="headerlink" title="1.2 内置构造器的prototype"></a>1.2 内置构造器的prototype</h5><p>Array是什么？<br>答：Array是一个函数</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/11/12/603bed777f274b1b84c6f4c8926b4339" alt=""></p>
+<p>那么Array一定也有一个prototype属性了</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/11/13/15fb4ff1bef7bc3e" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ Array.prototype.constructor // f Array()</span><br><span class="line">$ Array.prototype.constructor === Array // true</span><br><span class="line">$ Number.prototype.constructor === Number // true</span><br><span class="line">$ String.prototype.constructor === String // true</span><br><span class="line">$ Function.prototype.constructor === Function // true</span><br><span class="line">$ Object.prototype.constructor === Object // true</span><br></pre></td></tr></table></figure>
+<h5 id="1-3-改变prototype"><a href="#1-3-改变prototype" class="headerlink" title="1.3 改变prototype"></a>1.3 改变prototype</h5><p><img src="https://user-gold-cdn.xitu.io/2017/11/13/15fb5618a38b850a" alt=""></p>
+<p>结论：</p>
+<ul>
+<li>给prototype添加或者删除属性会影响所有已经或者未实例化的对象</li>
+<li>重写prototype只会影响新new出来的对象</li>
+</ul>
+<h4 id="2-隐式原型-proto"><a href="#2-隐式原型-proto" class="headerlink" title="2. 隐式原型__proto__"></a>2. 隐式原型__proto__</h4><ul>
+<li>JavaScript中任意对象都有一个内置属性<strong>proto</strong>， 指向创建这个对象的函数(constructor)的prototype</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr = new Array();</span><br><span class="line">arr.__ptoto__ === Array.prototype // true</span><br></pre></td></tr></table></figure>
+<p>根据”JavaScript中任意对象都有一个内置属性__proto__， 指向创建这个对象的函数(constructor)的prototype”，函数Array创建了对象arr，因此arr的__proto__指向Array.prototype。即</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/11/13/15fb4feb2eb4e810" alt=""></p>
+<ul>
+<li>此处提一下Object.create(),Object.create接收两个参数，第一个参数用来作为新对象的隐式原型, 第二个参数是对象的属性描述符。因此<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var person = &#123;LEG_NUM:2 &#125;;</span><br><span class="line">var xiaoMing = Object.create(person);</span><br><span class="line">xiaoMing.__proto__ === person; // true</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="2-1-改变-proto"><a href="#2-1-改变-proto" class="headerlink" title="2.1 改变__proto__"></a>2.1 改变__proto__</h5><p><img src="https://user-gold-cdn.xitu.io/2017/11/13/15fb5628e12d0785" alt=""></p>
+<p>结论</p>
+<ul>
+<li>改变arr.<strong>proto</strong>等价于改变Array.prototype</li>
+</ul>
+<h4 id="3-原型链"><a href="#3-原型链" class="headerlink" title="3. 原型链"></a>3. 原型链</h4><ul>
+<li>当我们访问某个对象中的某个属性时，如果该对象本身具有这个属性，则直接使用，如果该对象本身没有这个属性，那么就会沿着__proto__依次查找</li>
+</ul>
+<p><img src="https://user-gold-cdn.xitu.io/2017/11/13/15fb5576c544462e" alt=""></p>
+<p>上图中，访问obj.z的时候在obj中没有访问到，就会沿着__proto__向上查找，于是在foo.prototype中找到了返回3.</p>
+<p>访问obj.hasOwnProperty()时，同样在obj中没有找到这个属性，沿着__proto__向上查找，直到在Object.prototype中找到这个属性。</p>
+<h4 id="4-instanceof"><a href="#4-instanceof" class="headerlink" title="4. instanceof"></a>4. instanceof</h4><p>instanceof, 左边是一个对象，右边必须是一个函数或构造器。它会判断右边构造器的prototype属性是否出现在左边对象的原型链上。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[] instanceof Array // true</span><br><span class="line">[] instanceof Object // true</span><br></pre></td></tr></table></figure>
+<p><img src="https://user-gold-cdn.xitu.io/2017/11/13/15fb55bf5ff07694" alt=""></p>
+<h4 id="5-原型链的优缺点"><a href="#5-原型链的优缺点" class="headerlink" title="5. 原型链的优缺点"></a>5. 原型链的优缺点</h4><ul>
+<li>优点: 节省内存、方便维护</li>
+<li>缺点: 更改原型将影响所有指向它的对象<br>以下是《Javascript高级程序设计》中使用到的例子</li>
+</ul>
+<p><img src="https://user-gold-cdn.xitu.io/2017/11/13/15fb55df5e74932a" alt=""></p>
+<p>改变person1的friends，会同时改变person2的friends，因为它们共用一个prototype.这显然不是我们想要的。可以通过如下方法改进</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/11/13/15fb55f9e4dab238" alt=""></p>
+<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><ul>
+<li>显式原型的作用<br>用来实现基于原型的继承与属性的共享。</li>
+<li>隐式原型的作用<br>构成原型链，同样用于实现基于原型的继承。举个例子，当我们访问obj这个对象中的x属性时，如果在obj中找不到，那么就会沿着__proto__依次查找。</li>
+<li>二者的关系<br>隐式原型指向创建这个对象的函数(constructor)的prototype</li>
+</ul>
+<h4 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h4><ul>
+<li><a href="https://www.zhihu.com/question/34183746" target="_blank" rel="noopener">https://www.zhihu.com/question/34183746</a></li>
+<li><a href="https://www.kancloud.cn/wangfupeng/zepto-design-srouce/173684" target="_blank" rel="noopener">https://www.kancloud.cn/wangfupeng/zepto-design-srouce/173684</a></li>
+<li>《Javascript高级程序设计》(第3版)第6章</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/JS-prototype/" data-id="cja9e3k100001azsebl9yma9d" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/how-charles/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Charles使用指南
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/how-hexo/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo搭建github博客</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/总结/">总结</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/">JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/其它/">其它</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/其它/" style="font-size: 10px;">其它</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/arguments-slice/">浅析&#34;对arguments对象使用Array.prototype.slice()可以将其转化为数组&#34;</a>
+          </li>
+        
+          <li>
+            <a href="/2017/how-charles/">Charles使用指南</a>
+          </li>
+        
+          <li>
+            <a href="/2017/JS-prototype/">JS原型与原型链</a>
+          </li>
+        
+          <li>
+            <a href="/2017/how-hexo/">hexo搭建github博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Yawei Li<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
