@@ -55,7 +55,7 @@ index_generator:
 # Category & Tag
 default_category: conclusion
 category_map: ['学习笔记', '总结', '分享', '其它']
-tag_map: ['JS', 'Vue', '前端性能', '其它']
+tag_map: ['JS', 'Vue', '前端', '其它']
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
