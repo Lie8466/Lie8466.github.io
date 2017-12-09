@@ -6,12 +6,12 @@ date: 2017-11-10 19:42:37
 tags: 其它
 ---
 
-### Charles使用指南
-
 环境： Mac
 Charles版本：v4.1.3
 
 charles是Mac上很好用的抓包工具。在需要跨页面的查看所有请求时，Chrome的network已经不能满足这个要求，此时使用charles再好不过了。另外还可以使用charles更改请求和返回数据、使请求打到不同的环境等。下面介绍几个常用的技巧。
+
+<!--more-->
 
 #### Recording settings
 打开Proxy->Recording Settings，有以下三个选项

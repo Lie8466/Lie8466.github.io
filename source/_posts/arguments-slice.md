@@ -7,6 +7,8 @@ tags: JS
 ## 背景
 《Javascript高级程序设计(第3版)》的250页有一句话叫“对arguments对象使用Array.prototype.slice()可以将其转化为数组”，为什么这么说？
 
+<!--more-->
+
 ## arguments
 Js中的每一个函数(箭头函数除外)自动获得两个变量this和arguments。因此随便定义一个非箭头函数，可以打印出它的auguments;
 

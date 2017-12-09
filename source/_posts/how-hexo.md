@@ -9,11 +9,11 @@ tags: 其它
 
 ---
 
-### 使用hexo搭建github博客
-
 搭建环境:Mac
 
 使用hexo的优点：可以使用Markdown编辑页面，各种各样的Markdown编辑器使用起来非常方便
+
+<!--more-->
 
 #### 步骤一、创建github仓库
 

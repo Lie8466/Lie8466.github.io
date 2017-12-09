@@ -8,6 +8,7 @@ categories: 前端
 ## 背景
 文章[2017 前端大事件和趋势回顾，2018 何去何从？](http://mp.weixin.qq.com/s/LvooedOYCJzM8G20Tlw0HQ)中提到了2017年前端值得关注的十大事件，其中就提到了PWA。
 
+<!--more-->
 
 大家都知道Native app体验确实很好，下载到手机上之后入口也方便。它也有一些缺点:
 * 开发成本高(ios和安卓)

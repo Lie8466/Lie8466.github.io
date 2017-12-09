@@ -16,6 +16,8 @@ $ arr.length // 0
 ```
 问题：为什么arr会有length属性？
 
+<!--more-->
+
 #### 1. 显示原型prototype
 
 * JavaScript中每一个函数，都有一个prototype属性， 这个属性指向函数的原型对象
